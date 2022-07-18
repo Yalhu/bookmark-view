@@ -1,0 +1,14 @@
+node_modules
+dist
+key.pem
+bookmark view
+# artifacts
+# mock
+# .gitignore
+package-lock.json
+# *.output.js
+
+*开发.md
+*记录.md
+!-.eslintrc.js
+
