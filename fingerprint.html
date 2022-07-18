@@ -2,6 +2,7 @@
 <!doctype html>
 <html>
 <head>
+  <!-- 获取指纹 -->
   <title>Fingerprint Generage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -62,15 +63,32 @@
 
   <h1>Generage Your Fingerprint </h1>
 
-  <p>Your browser fingerprint: <strong id="fp"></strong></p>
-  <p><code id="time"/></p>
+  <p>Your browser fingerprint: <strong id="fp">正在获取浏览器指纹...</strong></p>
+  <!-- <p><code id="time"/></p> -->
 
-  <button type="button" id="btn">Get my fingerprint</button>
+  <!-- <button type="button" id="btn">Get my fingerprint</button> -->
 
 
-  <script src="http://valve.github.io/fingerprintjs2/fingerprint2.js"></script>
+  <script src="./public/js/fingerprint2.js"></script>
   <script>
-    $("#btn").on("click", function () {
+    if (window.requestIdleCallback) {
+        requestIdleCallback(function () {
+            new Fingerprint2().get(function (components) {
+              console.log('get fingerprint requestIdleCallback', components) // an array of components: {key: ..., value: ...}
+              $("#fp").text(components);
+
+            })
+        })
+    } else {
+        setTimeout(function () {
+          new Fingerprint2().get(function (components) {
+              console.log('get fingerprint setTimeout', components) // an array of components: {key: ..., value: ...}
+              $("#fp").text(components);
+
+            })  
+        }, 500)
+    }
+    /* $("#btn").on("click", function () {
       var d1 = new Date();
       var fp = new Fingerprint2();
       fp.get(function(result) {
@@ -83,7 +101,7 @@
         $("#fp").text(result);
         $("#time").text(timeString);
       });
-    });
+    }); */
   </script>
 </body>
 </html>
