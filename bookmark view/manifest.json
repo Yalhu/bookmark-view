@@ -64,6 +64,6 @@
       "description": "Opens popup.html"
     }
   },
-  "version": "0.2.2",
+  "version": "0.2.4",
   "content_security_policy": "script-src 'self' ; object-src 'self'"
 }
