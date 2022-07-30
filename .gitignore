@@ -1,7 +1,7 @@
 node_modules
 dist
 key.pem
-bookmark view
+# bookmark view
 # artifacts
 # mock
 # .gitignore
