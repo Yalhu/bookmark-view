@@ -1,6 +1,6 @@
 {
   "name": "bookmark-view",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "a bookmark management extension which view is likes folder. What's more, a search bar on browser is a surprise.",
   "scripts": {
     "test": "node test.js --name tom -- --mode test",
