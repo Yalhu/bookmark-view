@@ -1,6 +1,6 @@
 {
   "name": "bookmark-view",
-  "version": "0.2.5",
+  "version": "0.2.4-1",
   "description": "a bookmark management extension which view is likes folder. What's more, a search bar on browser is a surprise.",
   "scripts": {
     "test": "node test.js --name tom -- --mode test",
@@ -27,7 +27,7 @@
   "license": "ISC",
   "files": [
     "bookmark view",
-    "artifacts/bookmark-view-v0.2.4-2023-2-25.zip"
+    "artifacts/bookmark-view-v0.2.4-2023-5-30.zip"
   ],
   "dependencies": {
     "axios": "^0.20.0",
